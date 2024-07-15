@@ -41,7 +41,7 @@
                 <img class="w-100" src="{{ asset('assets/eighc-eaheader-650.jpg') }}" alt="eighc banner">
             </div>
             @yield('content') <!-- This will inject the content from welcome.blade.php -->
-            @yield('scripts')
+            @yield('scripts') <!-- This will inject the scripts from welcome.blade.php -->
         </div>
     </div>
 </div>
