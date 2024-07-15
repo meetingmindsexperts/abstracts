@@ -1,25 +1,20 @@
-name: FTP Deploy
-
-on:
-  push:
-    branches:
-      - main  # Change this to the branch you want to deploy
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - name:  🚚 Get latest code
-      uses: actions/checkout@v3
-
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.meetingmindsonline.com
         username: krishna@abstracts.meetingmindsonline.com
         password: $2kf5rEcW?[w
-        remote-dir: 'public_html/abstracts.meetingmindsonline.com/'
+        remote-dir: public_html/abstracts.meetingmindsonline.com/
         log-level: standard 
         
 
