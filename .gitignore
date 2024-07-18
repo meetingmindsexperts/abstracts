@@ -20,3 +20,9 @@ yarn-error.log
 /.idea
 /.vscode
 .htaccess
+
+
+useradd -m admin
+passwd admin
+usermod -aG wheel admin  
+su - admin
